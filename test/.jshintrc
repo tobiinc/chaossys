@@ -1,0 +1,14 @@
+{
+  "extends": "../.jshintrc",
+  "maxparams": false,
+  // for inject()
+  "jasmine": true,
+  "globalstrict": true,
+  "globals": {
+    "inject": false,
+    "require": true,
+    "strict": true,
+    "console": false
+  }
+}
+
