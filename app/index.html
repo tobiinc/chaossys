@@ -2,16 +2,20 @@
 <html lang="de">
  <head>
      <meta charset="utf-8">
-     <base href="/">
+     <!--<base href="/">-->
      <title translate="sys"></title>
-     <!-- build:css dist/static/css/base.min.css -->
+     <!-- build:css static/css/base.min.css -->
          <link rel="stylesheet" href="static/css/base.css" />
      <!-- endbuild -->
  </head>
 <body>
-<div></div>
-    <!-- build:js dist/static/js/scripts.js -->
-        <script src="/app/static/js/scripts.js"></script>
+<div id="wrapper">
+    <input id="value" type="number"/>
+    <textarea id="content"></textarea>
+    <a id="btn">go!</a>
+</div>
+    <!-- build:js static/js/scripts.min.js -->
+        <script src="static/js/scripts.js"></script>
     <!-- endbuild -->
 </body>
 </html>
