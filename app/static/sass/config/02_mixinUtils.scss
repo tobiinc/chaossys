@@ -1,0 +1,106 @@
+@mixin animation($duration:2s, $ease:ease, $delay:0s, $direction:normal, $iteration-count:infinite, $name:pending) {
+    -webkit-animation: $duration $ease $delay $direction $iteration-count $name;
+    -moz-animation: $duration $ease $delay $direction $iteration-count $name;
+    -o-animation: $duration $ease $delay $direction $iteration-count $name;
+    animation: $duration $ease $delay $direction $iteration-count $name;
+}
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+
+}
+@mixin transform($transformValues){
+    -webkit-transform: $transformValues;
+    -ms-transform: $transformValues;
+    transform: $transformValues;
+}
+@mixin transition($transitionValues){
+    -webkit-transition: $transitionValues;
+    -o-transition: $transitionValues;
+    transition: $transitionValues;
+}
+@mixin dimension($height, $width: $height) {
+    height: $height;
+    width: $width;
+}
+
+@mixin fontSet($size, $lineHeight: $size ) {
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin opacity($opacity: 1) {
+    $ieOpacity: 100 * $opacity;
+    -khtml-opacity: $opacity;
+    -moz-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin boxShadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin boxSizing($value){
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
+
+    /*********************************************************************/
+   /*************************** POSITION ********************************/
+  /*********************************************************************/
+ /*********** .element {.position(absolute, 0, 20px, null, auto);} ****/
+/*********************************************************************/
+
+/*.position($position: none, $top: none, $right: none, $bottom: none, $left: none) {
+    .property(position, $position);
+    .property(top, $top);
+    .property(right, $right);
+    .property(bottom, $bottom);
+    .property(left, $left);
+
+    .property($property, $value) {
+
+        ._getProp(position) when not ($position = none) {
+            position: $value;
+        }
+
+        ._getProp(top) when not ($top = none) {
+            top: $value;
+        }
+
+        ._getProp(right) when not ($right = none) {
+            right: $value;
+        }
+
+        ._getProp(bottom) when not ($bottom = none) {
+            bottom: $value;
+        }
+
+        ._getProp(left) when not ($left = none) {
+            left: $value;
+        }
+
+        ._getProp($property);
+
+    }
+}*/
