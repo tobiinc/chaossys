@@ -1,0 +1,35 @@
+#wrapper{
+    width: 300px;
+    margin: 50px auto;
+}
+input, textarea{
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: $doubleSpacing;
+    padding: $defaultSpacing;
+}
+textarea{
+    @include dimension(300px);
+}
+input{
+    float: left;
+    margin-right: 5%;
+    width: 45%;
+}
+
+#btn{
+    background-color: $color03;
+    display: block;
+    color: $color01;
+    font-weight: bold;
+    float: left;
+    margin-left: 5%;
+    padding: $defaultSpacing;
+    text-align: center;
+    width: 45%;
+    &:hover{
+        background-color: $color01;
+        color: $color03;
+        cursor: pointer;
+    }
+}
