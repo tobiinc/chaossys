@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
- <head>
+    <head>
      <meta charset="utf-8">
      <!--<base href="/">-->
      <title translate="sys"></title>
      <!-- build:css static/css/base.min.css -->
          <link rel="stylesheet" href="static/css/base.css" />
      <!-- endbuild -->
- </head>
-<body>
-<div id="wrapper">
-    <div class="overflowH">
-        <textarea id="content" placeholder="Content"></textarea>
-        <input id="value" type="number" placeholder="Value"/>
-        <a id="btn">go!</a>
-    </div>
-    <p id="result"></p>
-</div>
-<!-- build:js static/js/scripts.min.js -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="static/js/scripts.js"></script>
-<!-- endbuild -->
-</body>
+    </head>
+    <body>
+        <div id="wrapper">
+            <ul class="tabs">
+                <li class="active" id="byInput">INPUT</li>
+                <li id="byWeb">WEB</li>
+                <li id="byGenerated">GENERATED</li>
+            </ul>
+            <div class="overflowH">
+                <div class="byInput inputWrapper">
+                    <textarea id="content" placeholder="Content"></textarea>
+                </div>
+                <div class="byWeb inputWrapper hidden">
+                    byWeb
+                </div>
+                <div class="byGenerated inputWrapper hidden">
+                    byGenerated
+                </div>
+                <input id="value" type="number" placeholder="Value"/>
+                <a id="btn">go!</a>
+            </div>
+            <p id="result"></p>
+        </div>
+        <!-- build:js static/js/scripts.min.js -->
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="static/js/scripts.js"></script>
+        <!-- endbuild -->
+    </body>
 </html>

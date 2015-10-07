@@ -1,6 +1,25 @@
 #wrapper{
-    width: 300px;
+    border: 1px solid $color03;
     margin: 50px auto;
+    padding: $doubleSpacing $doubleSpacing 0 $doubleSpacing;
+    position: relative;
+    width: 342px;
+}
+.tabs{
+    @include position(absolute, -37px, null, null, -1px);
+    li{
+        border: 1px solid $color03;
+        border-width: 1px 1px 0 1px;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        margin-right: $defaultSpacing;
+        padding: $defaultSpacing;
+        &.active, &:hover{
+            background: $color03;
+            color: $color01;
+        }
+    }
 }
 input, textarea{
     box-sizing: border-box;
@@ -16,7 +35,6 @@ input{
     margin-right: 5%;
     width: 45%;
 }
-
 #btn{
     background-color: $color03;
     display: block;
